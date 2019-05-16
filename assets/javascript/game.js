@@ -10,4 +10,4 @@
 //Need to set up a function with an if/else to reset the player score and game values WITHOUT refreshing
     //Game must restart while still keeping track of current losses and wins since page opened
 
-alert("Test!")
+console.log("Test!");
