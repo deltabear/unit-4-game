@@ -1,4 +1,5 @@
 // Game will start when page loads
+    //Jewel variables will hold mathematic value 
 var purpJewelValue = [];
 var redJewelValue = [];
 var greenJewelValue = [];
@@ -14,9 +15,6 @@ var totalScore = 0;
 // Its how we we will start and restart the game.
 // (Note: It's not being run here. It's just being made for future use.)
 function startGame() {
-//Need variables for wins and losses, and array for numbers
-
-
 
 //Number randomizer we can use for selecting random number on page, values for Gem Buttons
   function getRandomNum() {
