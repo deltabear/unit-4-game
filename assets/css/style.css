@@ -8,3 +8,8 @@
     background: #ffffff;
     border-bottom: 2px solid #cccccc;
   }
+
+  body {
+    background-image: url("../images/memphis-colorful.png");
+    background-repeat: repeat;
+  }
