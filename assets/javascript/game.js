@@ -1,11 +1,11 @@
 // Game will start when page loads
     //Jewel variables will hold mathematic value 
-var purpJewelValue = [];
-var redJewelValue = [];
-var greenJewelValue = [];
-var bluJewelValue = [];
+var purpJewel = [];
+var redJewel = [];
+var greenJewel = [];
+var bluJewel = [];
 
-var randomNum = [];
+var randomGoal= [];
 // Game counters
 var winCounter = 0;
 var lossCounter = 0;
@@ -21,9 +21,16 @@ function startGame() {
 
 //Number randomizer we can use for selecting random number on page, values for Gem Buttons
 function getRandomGoal () {
-  return Math.floor(Math.random() * Math.floor(max));
+  return randomGoalArray.floor(Math.random() * randomGoalArray.floor);
+  
 }
 
+document.getElementById("#random-number").innerHTML = "";
+
+//When player clicks on buttons, their value should be added to player's score.
+purpJewel.onclick = function(){
+  alert("You pressed the Purple jewel!")
+};
 
 //Page should display player's wins and losses next to Random NUmber
 //When player reaches condition value equal to Random Number - victory!
@@ -33,4 +40,5 @@ function getRandomGoal () {
     //Game must restart while still keeping track of current losses and wins since page opened
 }
 
+console.log(getRandomGoal)
 console.log("Hello world!");
