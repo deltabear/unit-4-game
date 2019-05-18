@@ -26,7 +26,7 @@ var resetAndStart = function () {
   'https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel3.png',
   'https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel4.png']
 
-  randomResult = Math.floor(Math.random() * 60) + 30;
+  randomResult = Math.floor(Math.random() * 120) + 19;
 
   $("#random-number").html('Random Result: ' + randomResult);
 
