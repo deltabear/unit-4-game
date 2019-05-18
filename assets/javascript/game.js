@@ -45,6 +45,7 @@ var resetAndStart = function () {
 
 resetAndStart();
 
+
 //Event Delegation
 $(document).on('click', '.crystal', function () {
 
@@ -59,12 +60,17 @@ $(document).on('click', '.crystal', function () {
     
     $("#lost").html(lost);
 
+    previous = 0;
+
     resetAndStart();
 
-  } else if(previous === random_result){
+  } 
+  else if(previous === random_result){
     win++;
     
     $("#win").html(win);
+
+    previous = 0;
 
     resetAndStart();
   }
