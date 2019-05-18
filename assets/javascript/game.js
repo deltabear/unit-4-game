@@ -8,23 +8,65 @@
 //If it is EQUAL TO the total score, increment a win and start game over
 
 var randomResult;
-var lost;
-var win; 
+var lost = 0;
+var win = 0;
+var previous = 0;
 
-random_result = Math.floor(Math.random() * 60) + 30;
+//Setters
+//Getters
 
-$("#random-number").html('Random Result: ' + random_result);
+//$(".crystal").attr('class', 'red');
 
-for (var i = 0; i < 4; i++){
+var resetAndStart = function () {
 
-  var random = Math.floor(Math.random() * 12);
-  console.log(random);
+  $(".crystals").empty();
 
-  var crystal = $("<div>");
-    crystal.attr({
-    "class": 'crystal',
-    "data-random": random
-  });
+  random_result = Math.floor(Math.random() * 60) + 30;
 
-  $(".crystals").append(crystal);
+  $("#random-number").html('Random Result: ' + random_result);
+
+  for (var i = 0; i < 4; i++){
+
+      var random = Math.floor(Math.random() * 11) + 1;
+      //console.log(random);
+
+
+      var crystal = $("<div>");
+        crystal.attr({
+        "class": 'crystal',
+        "data-random": random
+      });
+
+        crystal.html(random);
+
+      $(".crystals").append(crystal);
+  }  
 }
+
+resetAndStart();
+
+//Event Delegation
+$(document).on('click', '.crystal', function () {
+
+  var num = parseInt($(this).attr('data-random'));
+
+  previous += num;
+
+  console.log(previous);
+
+  if(previous > random_result){
+    lost--;
+    
+    $("#lost").html(lost);
+
+    resetAndStart();
+
+  } else if(previous === random_result){
+    win++;
+    
+    $("#win").html(win);
+
+    resetAndStart();
+  }
+
+});
