@@ -11,13 +11,17 @@ var randomResult;
 var lost;
 var win; 
 
+random_result = Math.floor(Math.random() * 60) + 30;
+
+$("#random-number").html('Random Result: ' + random_result);
+
 for (var i = 0; i < 4; i++){
 
   var random = Math.floor(Math.random() * 12);
   console.log(random);
 
   var crystal = $("<div>");
-  crystal.attr({
+    crystal.attr({
     "class": 'crystal',
     "data-random": random
   });
