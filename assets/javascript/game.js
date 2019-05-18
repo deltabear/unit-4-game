@@ -21,6 +21,11 @@ var resetAndStart = function () {
 
   $(".crystals").empty();
 
+  var images = ["https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel1.png",
+  'https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel2.png',
+  'https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel3.png',
+  'https://raw.githubusercontent.com/delzerbear/unit-4-game/master/assets/images/jewel4.png']
+
   random_result = Math.floor(Math.random() * 60) + 30;
 
   $("#random-number").html('Random Result: ' + random_result);
@@ -36,29 +41,35 @@ var resetAndStart = function () {
         "class": 'crystal',
         "data-random": random
       });
-
-        crystal.html(random);
+        crystal.css({
+          "background-image":"url(" + images[i] + ")",
+          "background-size":"cover",
+        });
 
       $(".crystals").append(crystal);
   }  
+  
+  $("#previous").html("Total Score: ", previous);
+
 }
 
 resetAndStart();
 
-
 //Event Delegation
-$(document).on('click', '.crystal', function () {
+$(document).on('click', ".crystal", function () {
 
   var num = parseInt($(this).attr('data-random'));
 
   previous += num;
+
+  $("#previous").html("Total score: " + previous);
 
   console.log(previous);
 
   if(previous > random_result){
     lost--;
     
-    $("#lost").html(lost);
+    $("#lost").html("You've lost: " + lost);
 
     previous = 0;
 
@@ -68,7 +79,7 @@ $(document).on('click', '.crystal', function () {
   else if(previous === random_result){
     win++;
     
-    $("#win").html(win);
+    $("#win").html("You've won: " + win);
 
     previous = 0;
 
