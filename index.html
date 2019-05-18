@@ -17,7 +17,7 @@
 <body>
     <!-- Title section -->
     <header id="masthead">
-        <div class="container">
+        <div class="flex-container">
       <p><h1>Crystals Collector!</h1></p>
       </div>
     </header> 
@@ -25,7 +25,7 @@
  <!-- Game counters all held here. cards are being used to hold various sections. -->
 
   <!-- First card: Hold directions -->
-  <div id="directions" class="container">
+  <div id="directions" class="flex-container">
     <section class="main-section">
       <h3>Directions</h3>
         <p>You wil be given a random number at the start of the game.</p>
@@ -37,13 +37,13 @@
   </div>
 
   <!-- Second card: Holds Random Number. -->
-  <div id="random-number" class="container"></div>
+  <div id="random-number" class="flex-container"></div>
 
         
   <!-- Third card: Holds Wins and Losses. -->
-  <div id="wins-losses" class="container">
-     <b><p id="win"></p></b>
-     <b><p id="lost"></p></b>
+  <div id="wins-losses" class="flex-container">
+     <p id="win"></p>
+     <p id="lost"></p>
   </div>
 
     <!-- Use flexbox to adjust positions AFTER setting up game logic-->
@@ -53,7 +53,7 @@
 
 
     <!-- Fourth card: Holds Player Total Score. -->
-    <div id="player-score" class="container"></div>
+    <div id="player-score" class="flex-container"></div>
 
 
       <footer>
