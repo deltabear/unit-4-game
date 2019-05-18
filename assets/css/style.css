@@ -19,9 +19,14 @@ body {
   clear: both;
 }
 
-.masthead{
-margin: 20px;
-border: 1px solid red;
+/* header */
+
+.masthead {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 30px;
+  border-bottom: 2px solid #cccccc;
 }
 
 .directions{
@@ -56,11 +61,12 @@ img{
 }
 
 footer {
-  padding: 30px;
-  font-size: 12px;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  font-size: 15px;
   color: #cccccc;
   text-align: center;
   background: #666666;
-  border-top: 8px solid #5abdb8;
-  height: 30px;
 }
