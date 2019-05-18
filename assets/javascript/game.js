@@ -1,44 +1,26 @@
-// Game will start when page loads
-    //Jewel variables will hold mathematic value 
-var purpJewel = [];
-var redJewel = [];
-var greenJewel = [];
-var bluJewel = [];
+//A game with 4 crystals and Random Result
+//Every crystal needs to have a random number between 1-12
+//A new random number should be generated every time we win/lose
+//to those 4 crystals
+//When clicking any CRYSTAL, it should add to the previous result
+//Until it equals === the total score
+//If it is GREATER then total score, decrement a loss and game starts over
+//If it is EQUAL TO the total score, increment a win and start game over
 
-var randomGoal= [];
-// Game counters
-var winCounter = 0;
-var lossCounter = 0;
-var totalScore = 0;
+var randomResult;
+var lost;
+var win; 
 
-let jewelNumArray = [5, 15, 25, 50, 80];
-let randomGoalArray = [160, 180, 200, 245, 300];
+for (var i = 0; i < 4; i++){
 
-// startGame()
-// Its how we we will start and restart the game.
-// (Note: It's not being run here. It's just being made for future use.)
-function startGame() {
+  var random = Math.floor(Math.random() * 12);
+  console.log(random);
 
-//Number randomizer we can use for selecting random number on page, values for Gem Buttons
-function getRandomGoal () {
-  return randomGoalArray.floor(Math.random() * randomGoalArray.floor);
-  
+  var crystal = $("<div>");
+  crystal.attr({
+    "class": 'crystal',
+    "data-random": random
+  });
+
+  $(".crystals").append(crystal);
 }
-
-document.getElementById("#random-number").innerHTML = "";
-
-//When player clicks on buttons, their value should be added to player's score.
-purpJewel.onclick = function(){
-  alert("You pressed the Purple jewel!")
-};
-
-//Page should display player's wins and losses next to Random NUmber
-//When player reaches condition value equal to Random Number - victory!
-//Player score is greater then Random Number? BUST. Less then random number means game is still at hand.
-
-//Need to set up a function with an if/else to reset the player score and game values WITHOUT refreshing
-    //Game must restart while still keeping track of current losses and wins since page opened
-}
-
-console.log(getRandomGoal)
-console.log("Hello world!");
