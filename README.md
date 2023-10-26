@@ -14,4 +14,4 @@ Directions to play:
 
 -Each time when the game starts, the game will change the values of each crystal.
 
-Crystal artwork designed and created by me/E. Delzer 2019
+Crystal artwork designed and created by me/M. Delzer 2019
